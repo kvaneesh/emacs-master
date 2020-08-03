@@ -475,6 +475,7 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/scalable/apps/emacs.svg
 %{_datadir}/icons/hicolor/scalable/apps/emacs.ico
 %{_datadir}/icons/hicolor/scalable/mimetypes/emacs-document.svg
+%{_datadir}/glib-2.0/schemas/org.gnu.emacs.defaults.gschema.xml
 
 %files lucid -f lucid-eln-filelist -f lucid-dirs
 %{_bindir}/emacs-%{version}-lucid
