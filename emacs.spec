@@ -1,8 +1,8 @@
 %global _hardened_build 1
 
-%global commit     123baf3772e71a33eabc1b1169a9b778e2fe3877
+%global commit     6fde1fcd0fb5111f3262e5ff829b19ec9f136d90
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commit_date 20221101
+%global commit_date 20221122
 %global gitrel      .%{commit_date}.git%{shortcommit}
 
 # disable these for now until .pdmp is fixed
@@ -17,7 +17,8 @@ Version:       29.0.50
 Release:       1%{gitrel}%{?dist}
 License:       GPLv3+ and CC0-1.0
 URL:           http://www.gnu.org/software/emacs/
-Source0:       https://github.com/emacs-mirror/emacs/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
+#Source0:       https://github.com/emacs-mirror/emacs/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
+Source0:       https://git.savannah.gnu.org/cgit/emacs.git/snapshot/%{name}-%{commit}.tar.gz
 # generate the keyring via:
 # wget https://ftp.gnu.org/gnu/gnu-keyring.gpg
 # gpg2 --import gnu-keyring.gpg
