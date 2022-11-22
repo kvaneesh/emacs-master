@@ -73,6 +73,7 @@ BuildRequires: gtk3-devel
 BuildRequires: webkit2gtk4.1-devel
 
 BuildRequires: gnupg2
+BuildRequires: libtree-sitter-devel
 
 # For lucid
 BuildRequires: Xaw3d-devel
