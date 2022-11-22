@@ -83,6 +83,7 @@ BuildRequires: gtk3-devel
 BuildRequires: webkit2gtk3-devel
 
 BuildRequires: gnupg2
+BuildRequires: libtree-sitter-devel
 
 %if %{enable_lucid}
 # For lucid
