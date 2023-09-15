@@ -5,7 +5,7 @@ Summary:       GNU Emacs text editor
 Name:          emacs
 Epoch:         1
 Version:       29.1
-Release:       2%{?dist}
+Release:       3%{?dist}
 License:       GPL-3.0-or-later AND CC0-1.0
 URL:           http://www.gnu.org/software/emacs/
 Source0:       https://ftp.gnu.org/gnu/emacs/emacs-%{version}.tar.xz
@@ -74,6 +74,7 @@ BuildRequires: webkit2gtk4.1-devel
 
 BuildRequires: gnupg2
 BuildRequires: libtree-sitter-devel
+BuildRequires: libXi
 
 # For lucid
 BuildRequires: Xaw3d-devel
@@ -259,7 +260,7 @@ LDFLAGS=-Wl,-z,relro;  export LDFLAGS;
 %configure --with-dbus --with-gif --with-jpeg --with-png --with-rsvg \
            --with-tiff --with-xpm --with-x-toolkit=gtk3 --with-gpm=no \
            --with-xwidgets --with-modules --with-harfbuzz --with-cairo --with-json \
-           --with-native-compilation --with-pgtk
+           --with-native-compilation --with-pgtk --with-xinput2
 %{setarch} %make_build bootstrap NATIVE_FULL_AOT=1
 %{setarch} %make_build
 cd ..
